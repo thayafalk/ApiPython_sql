@@ -47,12 +47,18 @@ def get_apartamentos():
 def createjson():
     data = request.get_json()
     nome_edificio = data['nome_edificio']
-    locador = data['locatario']
+    locador = data['locador']
     statutos = data['statutos']
     return jsonify({'resultado' : 'Apartamento criado com sucesso!',
                     'nome_edificio' : nome_edificio,
                     'locador' : locador,
                     'statutos': statutos})
+# testar 
+
+#"nome_edificio":"ana",
+#"locador":"ana",
+#"statutos":"ana"
+
 
 # criar edificio
 @app.route('/edificio_criar', methods=['POST'])
@@ -63,6 +69,12 @@ def processjson():
     return jsonify({'resultado' : 'Apartamento criado com sucesso!',
                     'nome_edificio' : nome_edificio,
                     'endereco' : endereco})
+#testar 
+
+#"nome_edificio":"ana",
+#"endereco":"ana"
+
+
 
 
 #ver apartamentos disponiveis
@@ -104,6 +116,8 @@ def alugarjson():
                     'locador': 'Thayna Falkemback',
                     'edificio': 'Rosas'   })
 
+#testar
+#"nome_locador": "Paula"
 
 
 
